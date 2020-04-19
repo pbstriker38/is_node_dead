@@ -1,3 +1,5 @@
+'use strict';
+
 const GiphyClient = require('./giphy_client');
 
 module.exports = class AnswerRandomizer {

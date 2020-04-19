@@ -1,3 +1,5 @@
+'use strict';
+
 const GiphyClient = require('../../services/giphy_client.js');
 let giphy_client = new GiphyClient;
 
