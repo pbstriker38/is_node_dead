@@ -13,7 +13,7 @@ module.exports = class GiphyClient {
     return got('https://api.giphy.com/v1/gifs/random', {searchParams}).json().then(response => {
       return response.data.images.fixed_height.url;
     }).catch(error => {
-      console.log(error);
+      console.error(error);
       return '';
     });
   }
