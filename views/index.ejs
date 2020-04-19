@@ -56,6 +56,8 @@
   </head>
   <body>
     <h1><%= answer.message %></h1>
-    <img src=<%= answer.image %>>
+    <% if (answer.image) { %>
+      <img src=<%= answer.image %>>
+    <% } %>
   </body>
 </html>
