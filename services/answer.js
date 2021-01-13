@@ -45,7 +45,10 @@ module.exports = class AnswerRandomizer {
       { message: 'Are you dead? 🧟', color: '#359c2e' },
       { message: 'Never 🙉', color: '#cc4c42' },
       { message: 'Never', color: '#cc4c42', tag: 'never' },
-      { message: 'LOL', color: '#cc4c42', tag: 'laughing' }
+      { message: 'LOL', color: '#cc4c42', tag: 'laughing' },
+      { message: 'Deno?', color: '#9e1028', tag: 'dinosaur' },
+      { message: 'Deno?', color: '#d6d016', image_url: '/images/deno_logo.png' },
+      { message: 'Deno?', color: '#d68916', image_url: '/images/deno-rect-24fps.gif' }
     ]
     let a = _.sample(answers)
 
@@ -54,6 +57,10 @@ module.exports = class AnswerRandomizer {
 
     if(a.tag) {
       await this.randomizeImage(a.tag)
+    }
+
+    if(a.image_url) {
+      this._image = a.image_url
     }
   }
 
