@@ -13,7 +13,7 @@
     "express": "~4.16.1",
     "got": "^10.7.0",
     "http-errors": "~1.6.3",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
