@@ -1,5 +1,7 @@
 'use strict';
 
+const crypto = require('crypto');
+
 const GiphyClient = require('./giphy_client');
 
 module.exports = class AnswerRandomizer {
@@ -50,7 +52,7 @@ module.exports = class AnswerRandomizer {
       { message: 'Deno?', color: '#d6d016', image_url: '/images/deno_logo.png' },
       { message: 'Deno?', color: '#d68916', image_url: '/images/deno-rect-24fps.gif' }
     ]
-    let a = _.sample(answers)
+    let a = answers[crypto.randomInt(answers.length)]
 
     this._message = a.message
     this._color = a.color
